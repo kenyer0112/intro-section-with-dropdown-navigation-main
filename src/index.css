@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background: hsl(0, 0%, 98%);
+}
+
+.submenu {
+  display: none;
+}
+.menu:hover {
+  transition: ease-in-out 0.2s;
+}
+.menu:hover > .submenu {
+  display: block;
+}
+
+.submenu > li {
+  position: relative;
+}
+
+.hoverBtn:hover {
+ 
+  color: hsl(0, 0%, 8%);
+  outline: 2px solid hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+@media screen and (max-width: 600px) {
+  .mainmenu {
+    height: 80px;
+  }
+  nav {
+    position: absolute;
+    height: 100vh;
+    width: 190px;
+    padding-top: 80px;
+    padding-left: 25px;
+    background-color: white;
+    top: 0;
+    right: 0;
+  }
+  .closenav {
+    display: none;
+  }
+  .opennav {
+    display: block;
+  }
+}
